@@ -23,6 +23,66 @@
 #using scripts\shared\archetype_shared\archetype_shared;
 #using scripts\shared\callbacks_shared;
 
+//Patches
+//soe
+#using scripts\zm\zm_zod\ovum_patch;
+#using scripts\zm\zm_zod\flag_patch;
+#using scripts\zm\zm_zod\zm_zod_soft_patch;
+
+//tg
+#using scripts\zm\zm_factory\zm_factory_soft_patch;
+#using scripts\zm\zm_factory\lineup_practice;
+
+//de
+#using scripts\zm\zm_castle\zm_castle_soft_patch;
+#using scripts\zm\zm_castle\keeper_patch;
+#using scripts\zm\zm_castle\midgame_patch;
+#using scripts\zm\zm_castle\wisp_patch;
+#using scripts\zm\zm_castle\bow_shot_practice;
+
+//zns
+#using scripts\zm\zm_island\spider_bounce_practice;
+#using scripts\zm\zm_island\zm_island_soft_patch;
+
+//gk
+#using scripts\zm\zm_stalingrad\boss_patch;
+#using scripts\zm\zm_stalingrad\challenges_patch;
+#using scripts\zm\zm_stalingrad\gersch_patch;
+#using scripts\zm\zm_stalingrad\ld_skip_patch;
+#using scripts\zm\zm_stalingrad\sophia_patch;
+#using scripts\zm\zm_stalingrad\zm_stalingrad_soft_patch;
+
+//rev
+#using scripts\zm\zm_genesis\arnies_patch;
+#using scripts\zm\zm_genesis\basketball_patch;
+#using scripts\zm\zm_genesis\bones_patch;
+#using scripts\zm\zm_genesis\boss_one_patch;
+#using scripts\zm\zm_genesis\boss_two_patch;
+#using scripts\zm\zm_genesis\eggs_patch;
+#using scripts\zm\zm_genesis\zm_genesis_soft_patch;
+
+//ascension
+#using scripts\zm\zm_cosmodrome\lander_skip_practice;
+#using scripts\zm\zm_cosmodrome\zm_cosmodrome_soft_patch;
+
+//shang
+#using scripts\zm\zm_temple\coop_tiles_patch;
+#using scripts\zm\zm_temple\zm_temple_soft_patch;
+
+//moon
+#using scripts\zm\zm_moon\simon_says_patch;
+#using scripts\zm\zm_moon\zm_moon_soft_patch;
+
+//origins
+#using scripts\zm\zm_tomb\ending_patch;
+#using scripts\zm\zm_tomb\lightning_parts_patch;
+#using scripts\zm\zm_tomb\self_med_patch;
+#using scripts\zm\zm_tomb\zm_tomb_soft_patch;
+
+//song & pap
+#using scripts\zm\zm_common\song_patch;
+#using scripts\zm\zm_common\pap_patch;
+
 //Abilities
 #using scripts\shared\abilities\_ability_player;	//DO NOT REMOVE - needed for system registration
 
@@ -134,153 +194,127 @@ function find_patch(){
 	switch(getDvarString("patch")){
 		case "ovum":
 
-			level flag::wait_till("initial_blackscreen_passed");
-			iprintlnbold(getDvarString("patch") + " patch is loaded!");
+			ovum_patch::main();
 			break;
 
 		case "flag":
 
-			level flag::wait_till("initial_blackscreen_passed");
-			iprintlnbold(getDvarString("patch") + " patch is loaded!");
+			flag_patch::main();
 			break;
 
 		case "lineup":
 
-			level flag::wait_till("initial_blackscreen_passed");
-			iprintlnbold(getDvarString("patch") + " patch is loaded!");
+			lineup_practice::main();
 			break;
 
 		case "keeper":
 
-			level flag::wait_till("initial_blackscreen_passed");
-			iprintlnbold(getDvarString("patch") + " patch is loaded!");
+			keeper_patch::main();
 			break;
 
 		case "wisp":
 
-			level flag::wait_till("initial_blackscreen_passed");
-			iprintlnbold(getDvarString("patch") + " patch is loaded!");
-			break;
+			wisp_patch::main();
 			break;
 
 		case "midgame":
 
-			level flag::wait_till("initial_blackscreen_passed");
-			iprintlnbold(getDvarString("patch") + " patch is loaded!");
+			midgame_patch::main();
 			break;
 
 		case "bow shots":
 
-			level flag::wait_till("initial_blackscreen_passed");
-			iprintlnbold(getDvarString("patch") + " patch is loaded!");
+			bow_shot_practice::main();
 			break;
 
 		case "spider bounce":
 
-			level flag::wait_till("initial_blackscreen_passed");
-			iprintlnbold(getDvarString("patch") + " patch is loaded!");
+			spider_bounce_practice::main();
 			break;
 
 		case "boss":
 
-			level flag::wait_till("initial_blackscreen_passed");
-			iprintlnbold(getDvarString("patch") + " patch is loaded!");
+			boss_patch::main();
 			break;
 
 		case "challenges":
 
-			level flag::wait_till("initial_blackscreen_passed");
-			iprintlnbold(getDvarString("patch") + " patch is loaded!");
+			challenges_patch::main();
 			break;
 
 		case "gersch":
 
-			level flag::wait_till("initial_blackscreen_passed");
-			iprintlnbold(getDvarString("patch") + " patch is loaded!");
+			gersch_patch::main();
 			break;
 
 		case "sophia":
 
-			level flag::wait_till("initial_blackscreen_passed");
-			iprintlnbold(getDvarString("patch") + " patch is loaded!");
+			sophia_patch::main();
 			break;
 
 		case "ld skip":
 
-			level flag::wait_till("initial_blackscreen_passed");
-			iprintlnbold(getDvarString("patch") + " patch is loaded!");
+			ld_skip_patch::main();
 			break;
 
 		case "arnies":
 
-			level flag::wait_till("initial_blackscreen_passed");
-			iprintlnbold(getDvarString("patch") + " patch is loaded!");
+			arnies_patch::main();
 			break;
 
 		case "eggs":
 
-			level flag::wait_till("initial_blackscreen_passed");
-			iprintlnbold(getDvarString("patch") + " patch is loaded!");
+			eggs_patch::main();
 			break;
 
 		case "basketball":
 
-			level flag::wait_till("initial_blackscreen_passed");
-			iprintlnbold(getDvarString("patch") + " patch is loaded!");
+			basketball_patch::main();
+			break;
+
+		case "bones":
+
+			bones_patch::main();
 			break;
 
 		case "boss 1":
 
-			level flag::wait_till("initial_blackscreen_passed");
-			iprintlnbold(getDvarString("patch") + " patch is loaded!");
+			boss_one_patch::main();
 			break;
 
 		case "boss 2":
 
-			level flag::wait_till("initial_blackscreen_passed");
-			iprintlnbold(getDvarString("patch") + " patch is loaded!");
+			boss_two_patch::main();
 			break;
 
 		case "lander skip":
 
-			level flag::wait_till("initial_blackscreen_passed");
-			iprintlnbold(getDvarString("patch") + " patch is loaded!");
+			lander_skip_practice::main();
 			break;
 
 		case "coop tiles":
 
-			level flag::wait_till("initial_blackscreen_passed");
-			iprintlnbold(getDvarString("patch") + " patch is loaded!");
+			coop_tiles_patch::main();
 			break;
 
 		case "simon says":
 
-			level flag::wait_till("initial_blackscreen_passed");
-			iprintlnbold(getDvarString("patch") + " patch is loaded!");
+			simon_says_patch::main();
 			break;
 
 		case "lightning parts":
 
-			level flag::wait_till("initial_blackscreen_passed");
-			iprintlnbold(getDvarString("patch") + " patch is loaded!");
+			lightning_parts_patch::main();
 			break;
 
 		case "self med":
 
-			level flag::wait_till("initial_blackscreen_passed");
-			iprintlnbold(getDvarString("patch") + " patch is loaded!");
-			break;
-
-		case "midgame":
-
-			level flag::wait_till("initial_blackscreen_passed");
-			iprintlnbold(getDvarString("patch") + " patch is loaded!");
+			self_med_patch::main();
 			break;
 
 		case "ending":
 
-			level flag::wait_till("initial_blackscreen_passed");
-			iprintlnbold(getDvarString("patch") + " patch is loaded!");
+			ending_patch::main();
 			break;
 
 		case "soft":
@@ -288,268 +322,66 @@ function find_patch(){
 
 				case "zm_zod":
 
-					level flag::wait_till("initial_blackscreen_passed");
-					iprintlnbold(level.script + " " + getDvarString("patch") + " patch is loaded!");
+					zm_zod_soft_patch::main();
 					break;
 
 				case "zm_factory":
 
-					level flag::wait_till("initial_blackscreen_passed");
-					iprintlnbold(level.script + " " + getDvarString("patch") + " patch is loaded!");
+					zm_factory_soft_patch::main();
 					break;
 
 				case "zm_castle":
 
-					level flag::wait_till("initial_blackscreen_passed");
-					iprintlnbold(level.script + " " + getDvarString("patch") + " patch is loaded!");
+					zm_castle_soft_patch::main();
 					break;
 
 				case "zm_island":
 
-					level flag::wait_till("initial_blackscreen_passed");
-					iprintlnbold(level.script + " " + getDvarString("patch") + " patch is loaded!");
+					zm_island_soft_patch::main();
 					break;
 
 				case "zm_stalingrad":
 
-					level flag::wait_till("initial_blackscreen_passed");
-					iprintlnbold(level.script + " " + getDvarString("patch") + " patch is loaded!");
+					zm_stalingrad_soft_patch::main();
 					break;
 
 				case "zm_genesis":
 
-					level flag::wait_till("initial_blackscreen_passed");
-					iprintlnbold(level.script + " " + getDvarString("patch") + " patch is loaded!");
-					break;
-
-				case "zm_prototype":
-
-					level flag::wait_till("initial_blackscreen_passed");
-					iprintlnbold(level.script + " " + getDvarString("patch") + " patch is loaded!");
-					break;
-
-				case "zm_asylum":
-
-					level flag::wait_till("initial_blackscreen_passed");
-					iprintlnbold(level.script + " " + getDvarString("patch") + " patch is loaded!");
-					break;
-
-				case "zm_sumpf":
-
-					level flag::wait_till("initial_blackscreen_passed");
-					iprintlnbold(level.script + " " + getDvarString("patch") + " patch is loaded!");
-					break;
-
-				case "zm_theater":
-
-					level flag::wait_till("initial_blackscreen_passed");
-					iprintlnbold(level.script + " " + getDvarString("patch") + " patch is loaded!");
+					zm_genesis_soft_patch::main();
 					break;
 
 				case "zm_cosmodrome":
 
-					level flag::wait_till("initial_blackscreen_passed");
-					iprintlnbold(level.script + " " + getDvarString("patch") + " patch is loaded!");
+					zm_cosmodrome_soft_patch::main();
 					break;
 
 				case "zm_temple":
 
-					level flag::wait_till("initial_blackscreen_passed");
-					iprintlnbold(level.script + " " + getDvarString("patch") + " patch is loaded!");
+					zm_temple_soft_patch::main();
 					break;
 
 				case "zm_moon":
 
-					level flag::wait_till("initial_blackscreen_passed");
-					iprintlnbold(level.script + " " + getDvarString("patch") + " patch is loaded!");
+					zm_moon_soft_patch::main();
 					break;
 
 				case "zm_tomb":
 
-					level flag::wait_till("initial_blackscreen_passed");
-					iprintlnbold(level.script + " " + getDvarString("patch") + " patch is loaded!");
+					zm_tomb_soft_patch::main();
 					break;
 
 				}
 			break;
 		case "song":
-			switch(level.script){
 
-				case "zm_zod":
-
-					level flag::wait_till("initial_blackscreen_passed");
-					iprintlnbold(level.script + " " + getDvarString("patch") + " patch is loaded!");
-					break;
-
-				case "zm_factory":
-
-					level flag::wait_till("initial_blackscreen_passed");
-					iprintlnbold(level.script + " " + getDvarString("patch") + " patch is loaded!");
-					break;
-
-				case "zm_castle":
-
-					level flag::wait_till("initial_blackscreen_passed");
-					iprintlnbold(level.script + " " + getDvarString("patch") + " patch is loaded!");
-					break;
-
-				case "zm_island":
-
-					level flag::wait_till("initial_blackscreen_passed");
-					iprintlnbold(level.script + " " + getDvarString("patch") + " patch is loaded!");
-					break;
-
-				case "zm_stalingrad":
-
-					level flag::wait_till("initial_blackscreen_passed");
-					iprintlnbold(level.script + " " + getDvarString("patch") + " patch is loaded!");
-					break;
-
-				case "zm_genesis":
-
-					level flag::wait_till("initial_blackscreen_passed");
-					iprintlnbold(level.script + " " + getDvarString("patch") + " patch is loaded!");
-					break;
-
-				case "zm_prototype":
-
-					level flag::wait_till("initial_blackscreen_passed");
-					iprintlnbold(level.script + " " + getDvarString("patch") + " patch is loaded!");
-					break;
-
-				case "zm_asylum":
-
-					level flag::wait_till("initial_blackscreen_passed");
-					iprintlnbold(level.script + " " + getDvarString("patch") + " patch is loaded!");
-					break;
-
-				case "zm_sumpf":
-
-					level flag::wait_till("initial_blackscreen_passed");
-					iprintlnbold(level.script + " " + getDvarString("patch") + " patch is loaded!");
-					break;
-
-				case "zm_theater":
-
-					level flag::wait_till("initial_blackscreen_passed");
-					iprintlnbold(level.script + " " + getDvarString("patch") + " patch is loaded!");
-					break;
-
-				case "zm_cosmodrome":
-
-					level flag::wait_till("initial_blackscreen_passed");
-					iprintlnbold(level.script + " " + getDvarString("patch") + " patch is loaded!");
-					break;
-
-				case "zm_temple":
-
-					level flag::wait_till("initial_blackscreen_passed");
-					iprintlnbold(level.script + " " + getDvarString("patch") + " patch is loaded!");
-					break;
-
-				case "zm_moon":
-
-					level flag::wait_till("initial_blackscreen_passed");
-					iprintlnbold(level.script + " " + getDvarString("patch") + " patch is loaded!");
-					break;
-
-				case "zm_tomb":
-
-					level flag::wait_till("initial_blackscreen_passed");
-					iprintlnbold(level.script + " " + getDvarString("patch") + " patch is loaded!");
-					break;
-
-				}
+			song_patch::main();
 			break;
+
 		case "pap":
-			switch(level.script){
 
-				case "zm_zod":
-
-					level flag::wait_till("initial_blackscreen_passed");
-					iprintlnbold(level.script + " " + getDvarString("patch") + " patch is loaded!");
-					break;
-
-				case "zm_factory":
-
-					level flag::wait_till("initial_blackscreen_passed");
-					iprintlnbold(level.script + " " + getDvarString("patch") + " patch is loaded!");
-					break;
-
-				case "zm_castle":
-
-					level flag::wait_till("initial_blackscreen_passed");
-					iprintlnbold(level.script + " " + getDvarString("patch") + " patch is loaded!");
-					break;
-
-				case "zm_island":
-
-					level flag::wait_till("initial_blackscreen_passed");
-					iprintlnbold(level.script + " " + getDvarString("patch") + " patch is loaded!");
-					break;
-
-				case "zm_stalingrad":
-
-					level flag::wait_till("initial_blackscreen_passed");
-					iprintlnbold(level.script + " " + getDvarString("patch") + " patch is loaded!");
-					break;
-
-				case "zm_genesis":
-
-					level flag::wait_till("initial_blackscreen_passed");
-					iprintlnbold(level.script + " " + getDvarString("patch") + " patch is loaded!");
-					break;
-
-				case "zm_prototype":
-
-					level flag::wait_till("initial_blackscreen_passed");
-					iprintlnbold(level.script + " " + getDvarString("patch") + " patch is loaded!");
-					break;
-
-				case "zm_asylum":
-
-					level flag::wait_till("initial_blackscreen_passed");
-					iprintlnbold(level.script + " " + getDvarString("patch") + " patch is loaded!");
-					break;
-
-				case "zm_sumpf":
-
-					level flag::wait_till("initial_blackscreen_passed");
-					iprintlnbold(level.script + " " + getDvarString("patch") + " patch is loaded!");
-					break;
-
-				case "zm_theater":
-
-					level flag::wait_till("initial_blackscreen_passed");
-					iprintlnbold(level.script + " " + getDvarString("patch") + " patch is loaded!");
-					break;
-
-				case "zm_cosmodrome":
-
-					level flag::wait_till("initial_blackscreen_passed");
-					iprintlnbold(level.script + " " + getDvarString("patch") + " patch is loaded!");
-					break;
-
-				case "zm_temple":
-
-					level flag::wait_till("initial_blackscreen_passed");
-					iprintlnbold(level.script + " " + getDvarString("patch") + " patch is loaded!");
-					break;
-
-				case "zm_moon":
-
-					level flag::wait_till("initial_blackscreen_passed");
-					iprintlnbold(level.script + " " + getDvarString("patch") + " patch is loaded!");
-					break;
-
-				case "zm_tomb":
-
-					level flag::wait_till("initial_blackscreen_passed");
-					iprintlnbold(level.script + " " + getDvarString("patch") + " patch is loaded!");
-					break;
-
-				}
+			pap_patch::main();
 			break;
+
 	}
 
 }
