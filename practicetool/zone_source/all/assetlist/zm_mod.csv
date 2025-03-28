@@ -1,0 +1,9 @@
+rawfile,dummy.cfg
+rawfile,ui/uieditor/widgets/pc/startmenu/dropdown/optiondropdown.lua
+rawfile,ui/uieditor/widgets/pc/utility/optioninfowidget.lua
+rawfile,ui/uieditor/widgets/startmenu/addallinonecommands.lua
+rawfile,ui/uieditor/widgets/startmenu/startmenu_custom.lua
+rawfile,ui/uieditor/widgets/startmenu/startmenu_options.lua
+scriptparsetree,scripts/zm/_load.csc
+scriptparsetree,scripts/zm/_load.gsc
+keyvaluepairs,zm_mod

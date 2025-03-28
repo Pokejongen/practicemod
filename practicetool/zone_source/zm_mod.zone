@@ -1,0 +1,20 @@
+>mode,zm
+>type,common
+
+#include "zm_mod.class"
+
+scriptparsetree,scripts/zm/_load.csc
+scriptparsetree,scripts/zm/_load.gsc
+
+//Buttons commands
+rawfile,UI/UIEditor/Widgets/StartMenu/StartMenu_Options.lua
+rawfile,UI/UIEditor/Widgets/StartMenu/StartMenu_Custom.lua
+rawfile,UI/UIEditor/Widgets/StartMenu/AddAllInOneCommands.lua
+rawfile,UI/UIEditor/Widgets/PC/StartMenu/DropDown/OptionDropdown.lua //Required
+rawfile,UI/UIEditor/Widgets/PC/Utility/OptionInfoWidget.lua //Required
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+rawfile,dummy.cfg
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+

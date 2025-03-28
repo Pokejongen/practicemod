@@ -1,0 +1,13 @@
+index,type,name,resident,streamed,parentStack
+1,string,,0,0,||assetlist
+2,scriptparsetree,scripts/zm/_load.csc,2853,0,|zone_source/zm_mod.zone|csv
+3,scriptparsetree,scripts/zm/_load.gsc,15696,0,|zone_source/zm_mod.zone|csv
+4,rawfile,ui/uieditor/widgets/startmenu/startmenu_options.lua,22093,0,|zone_source/zm_mod.zone|csv
+5,rawfile,ui/uieditor/widgets/startmenu/startmenu_custom.lua,6664,0,|zone_source/zm_mod.zone|csv
+6,rawfile,ui/uieditor/widgets/startmenu/addallinonecommands.lua,7155,0,|zone_source/zm_mod.zone|csv
+7,rawfile,ui/uieditor/widgets/pc/startmenu/dropdown/optiondropdown.lua,15510,0,|zone_source/zm_mod.zone|csv
+8,rawfile,ui/uieditor/widgets/pc/utility/optioninfowidget.lua,3124,0,|zone_source/zm_mod.zone|csv
+9,rawfile,dummy.cfg,26,0,|zone_source/zm_mod.zone|csv
+10,keyvaluepairs,zm_mod,1114,0,||assetlist
+11,bgcache,zm_mod,529,0,||assetlist
+12,assetlist,,160,0,
