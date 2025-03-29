@@ -107,8 +107,6 @@ local f0_local3 = function(controller, color)
             return "lightning parts"
         elseif color == "self med" then
             return "self med"
-        elseif color == "midgame" then
-            return "midgame"
         elseif color == "ending" then
             return "ending"
         elseif color == "soft" then
@@ -186,8 +184,7 @@ CoD.AddAllInOneCommands = function(controller)
         table.insert(f3_local0, f3_local1("soft"))
         table.insert(f3_local0, f3_local1("song"))
         table.insert(f3_local0, f3_local1("pap"))
-    elseif Engine.GetCurrentMap() == "zm_prototype" then   
-        table.insert(f3_local0, f3_local1("song"))
+    elseif Engine.GetCurrentMap() == "zm_prototype" then
     elseif Engine.GetCurrentMap() == "zm_asylum" then   
         table.insert(f3_local0, f3_local1("song"))
     elseif Engine.GetCurrentMap() == "zm_sumpf" then   
@@ -213,7 +210,6 @@ CoD.AddAllInOneCommands = function(controller)
     elseif Engine.GetCurrentMap() == "zm_tomb" then
         table.insert(f3_local0, f3_local1("lightning parts"))
         table.insert(f3_local0, f3_local1("self med"))
-        table.insert(f3_local0, f3_local1("midgame")) 
         table.insert(f3_local0, f3_local1("ending")) 
         table.insert(f3_local0, f3_local1("soft"))
         table.insert(f3_local0, f3_local1("song"))

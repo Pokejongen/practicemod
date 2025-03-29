@@ -53,3 +53,37 @@ function main(){
     
 
 }
+
+function ms_to_str(ms)
+{
+    min = 0;
+    sec = 0;
+    if(ms >= 60000)
+    {
+        min = Int(ms / 60000);
+        ms -= min * 60000;
+    }
+    if(ms >= 1000)
+    {
+        sec = Int(ms / 1000);
+        ms -= sec * 1000;
+    }
+    time = "";
+    if(min > 0)
+    {
+        time += min + ":";
+    }
+    if(min || sec > 0)
+    {
+        if(sec < 10 && min) time += "0";
+        time += sec + ".";
+    }
+    if(min || sec || ms > 0)
+    {
+        if(!min && !sec) time += "0.";
+        if(ms <= 50) time += "0";
+        ms /= 10;
+        time += ms;
+    }
+    return time;
+}
