@@ -12,9 +12,85 @@ scriptparsetree,scripts/zm/_load.csc
 	file,C:\Program Files (x86)\Steam\steamapps\common\Call of Duty Black Ops III\share\raw\scripts\shared\shared.gsh,1720471571,
 	file,C:\Program Files (x86)\Steam\steamapps\common\Call of Duty Black Ops III\share\raw\scripts\shared\version.gsh,1720471420,
 scriptparsetree,scripts/zm/_load.gsc
-	file,C:\Program Files (x86)\Steam\steamapps\common\Call of Duty Black Ops III\mods\practicetool\scripts\zm\_load.gsc,1743191036,
+	file,C:\Program Files (x86)\Steam\steamapps\common\Call of Duty Black Ops III\mods\practicetool\scripts\zm\_load.gsc,1743269611,
 	file,C:\Program Files (x86)\Steam\steamapps\common\Call of Duty Black Ops III\share\raw\scripts\shared\shared.gsh,1720471571,
 	file,C:\Program Files (x86)\Steam\steamapps\common\Call of Duty Black Ops III\share\raw\scripts\shared\version.gsh,1720471420,
+scriptparsetree,scripts/zm/zm_zod/ovum_patch.gsc
+	file,C:\Program Files (x86)\Steam\steamapps\common\Call of Duty Black Ops III\mods\practicetool\scripts\zm\zm_zod\ovum_patch.gsc,1743195334,
+scriptparsetree,scripts/zm/zm_zod/flag_patch.gsc
+	file,C:\Program Files (x86)\Steam\steamapps\common\Call of Duty Black Ops III\mods\practicetool\scripts\zm\zm_zod\flag_patch.gsc,1743194930,
+scriptparsetree,scripts/zm/zm_zod/zm_zod_soft_patch.gsc
+	file,C:\Program Files (x86)\Steam\steamapps\common\Call of Duty Black Ops III\mods\practicetool\scripts\zm\zm_zod\zm_zod_soft_patch.gsc,1743195324,
+scriptparsetree,scripts/zm/zm_factory/lineup_practice.gsc
+	file,C:\Program Files (x86)\Steam\steamapps\common\Call of Duty Black Ops III\mods\practicetool\scripts\zm\zm_factory\lineup_practice.gsc,1743195824,
+scriptparsetree,scripts/zm/zm_factory/zm_factory_soft_patch.gsc
+	file,C:\Program Files (x86)\Steam\steamapps\common\Call of Duty Black Ops III\mods\practicetool\scripts\zm\zm_factory\zm_factory_soft_patch.gsc,1743195420,
+scriptparsetree,scripts/zm/zm_castle/bow_shot_practice.gsc
+	file,C:\Program Files (x86)\Steam\steamapps\common\Call of Duty Black Ops III\mods\practicetool\scripts\zm\zm_castle\bow_shot_practice.gsc,1743195508,
+scriptparsetree,scripts/zm/zm_castle/keeper_patch.gsc
+	file,C:\Program Files (x86)\Steam\steamapps\common\Call of Duty Black Ops III\mods\practicetool\scripts\zm\zm_castle\keeper_patch.gsc,1743195189,
+scriptparsetree,scripts/zm/zm_castle/midgame_patch.gsc
+	file,C:\Program Files (x86)\Steam\steamapps\common\Call of Duty Black Ops III\mods\practicetool\scripts\zm\zm_castle\midgame_patch.gsc,1743195212,
+scriptparsetree,scripts/zm/zm_castle/wisp_patch.gsc
+	file,C:\Program Files (x86)\Steam\steamapps\common\Call of Duty Black Ops III\mods\practicetool\scripts\zm\zm_castle\wisp_patch.gsc,1743195185,
+scriptparsetree,scripts/zm/zm_castle/zm_castle_soft_patch.gsc
+	file,C:\Program Files (x86)\Steam\steamapps\common\Call of Duty Black Ops III\mods\practicetool\scripts\zm\zm_castle\zm_castle_soft_patch.gsc,1743195361,
+scriptparsetree,scripts/zm/zm_island/spider_bounce_practice.gsc
+	file,C:\Program Files (x86)\Steam\steamapps\common\Call of Duty Black Ops III\mods\practicetool\scripts\zm\zm_island\spider_bounce_practice.gsc,1743195621,
+scriptparsetree,scripts/zm/zm_island/zm_island_soft_patch.gsc
+	file,C:\Program Files (x86)\Steam\steamapps\common\Call of Duty Black Ops III\mods\practicetool\scripts\zm\zm_island\zm_island_soft_patch.gsc,1743196247,
+scriptparsetree,scripts/zm/zm_stalingrad/boss_patch.gsc
+	file,C:\Program Files (x86)\Steam\steamapps\common\Call of Duty Black Ops III\mods\practicetool\scripts\zm\zm_stalingrad\boss_patch.gsc,1743195647,
+scriptparsetree,scripts/zm/zm_stalingrad/challenges_patch.gsc
+	file,C:\Program Files (x86)\Steam\steamapps\common\Call of Duty Black Ops III\mods\practicetool\scripts\zm\zm_stalingrad\challenges_patch.gsc,1743195683,
+scriptparsetree,scripts/zm/zm_stalingrad/gersch_patch.gsc
+	file,C:\Program Files (x86)\Steam\steamapps\common\Call of Duty Black Ops III\mods\practicetool\scripts\zm\zm_stalingrad\gersch_patch.gsc,1743195777,
+scriptparsetree,scripts/zm/zm_stalingrad/ld_skip_patch.gsc
+	file,C:\Program Files (x86)\Steam\steamapps\common\Call of Duty Black Ops III\mods\practicetool\scripts\zm\zm_stalingrad\ld_skip_patch.gsc,1743195743,
+scriptparsetree,scripts/zm/zm_stalingrad/sophia_patch.gsc
+	file,C:\Program Files (x86)\Steam\steamapps\common\Call of Duty Black Ops III\mods\practicetool\scripts\zm\zm_stalingrad\sophia_patch.gsc,1743195753,
+scriptparsetree,scripts/zm/zm_stalingrad/zm_stalingrad_soft_patch.gsc
+	file,C:\Program Files (x86)\Steam\steamapps\common\Call of Duty Black Ops III\mods\practicetool\scripts\zm\zm_stalingrad\zm_stalingrad_soft_patch.gsc,1743195802,
+scriptparsetree,scripts/zm/zm_genesis/arnies_patch.gsc
+	file,C:\Program Files (x86)\Steam\steamapps\common\Call of Duty Black Ops III\mods\practicetool\scripts\zm\zm_genesis\arnies_patch.gsc,1743197876,
+scriptparsetree,scripts/zm/zm_genesis/basketball_patch.gsc
+	file,C:\Program Files (x86)\Steam\steamapps\common\Call of Duty Black Ops III\mods\practicetool\scripts\zm\zm_genesis\basketball_patch.gsc,1743195896,
+scriptparsetree,scripts/zm/zm_genesis/bones_patch.gsc
+	file,C:\Program Files (x86)\Steam\steamapps\common\Call of Duty Black Ops III\mods\practicetool\scripts\zm\zm_genesis\bones_patch.gsc,1743195862,
+scriptparsetree,scripts/zm/zm_genesis/boss_one_patch.gsc
+	file,C:\Program Files (x86)\Steam\steamapps\common\Call of Duty Black Ops III\mods\practicetool\scripts\zm\zm_genesis\boss_one_patch.gsc,1743195914,
+scriptparsetree,scripts/zm/zm_genesis/boss_two_patch.gsc
+	file,C:\Program Files (x86)\Steam\steamapps\common\Call of Duty Black Ops III\mods\practicetool\scripts\zm\zm_genesis\boss_two_patch.gsc,1743197888,
+scriptparsetree,scripts/zm/zm_genesis/eggs_patch.gsc
+	file,C:\Program Files (x86)\Steam\steamapps\common\Call of Duty Black Ops III\mods\practicetool\scripts\zm\zm_genesis\eggs_patch.gsc,1743195878,
+scriptparsetree,scripts/zm/zm_genesis/zm_genesis_soft_patch.gsc
+	file,C:\Program Files (x86)\Steam\steamapps\common\Call of Duty Black Ops III\mods\practicetool\scripts\zm\zm_genesis\zm_genesis_soft_patch.gsc,1743197649,
+scriptparsetree,scripts/zm/zm_cosmodrome/lander_skip_practice.gsc
+	file,C:\Program Files (x86)\Steam\steamapps\common\Call of Duty Black Ops III\mods\practicetool\scripts\zm\zm_cosmodrome\lander_skip_practice.gsc,1743196001,
+scriptparsetree,scripts/zm/zm_cosmodrome/zm_cosmodrome_soft_patch.gsc
+	file,C:\Program Files (x86)\Steam\steamapps\common\Call of Duty Black Ops III\mods\practicetool\scripts\zm\zm_cosmodrome\zm_cosmodrome_soft_patch.gsc,1743196040,
+scriptparsetree,scripts/zm/zm_temple/coop_tiles_patch.gsc
+	file,C:\Program Files (x86)\Steam\steamapps\common\Call of Duty Black Ops III\mods\practicetool\scripts\zm\zm_temple\coop_tiles_patch.gsc,1743196072,
+scriptparsetree,scripts/zm/zm_temple/zm_temple_soft_patch.gsc
+	file,C:\Program Files (x86)\Steam\steamapps\common\Call of Duty Black Ops III\mods\practicetool\scripts\zm\zm_temple\zm_temple_soft_patch.gsc,1743196100,
+scriptparsetree,scripts/zm/zm_moon/simon_says_patch.gsc
+	file,C:\Program Files (x86)\Steam\steamapps\common\Call of Duty Black Ops III\mods\practicetool\scripts\zm\zm_moon\simon_says_patch.gsc,1743196124,
+scriptparsetree,scripts/zm/zm_moon/zm_moon_soft_patch.gsc
+	file,C:\Program Files (x86)\Steam\steamapps\common\Call of Duty Black Ops III\mods\practicetool\scripts\zm\zm_moon\zm_moon_soft_patch.gsc,1743196145,
+scriptparsetree,scripts/zm/zm_tomb/ending_patch.gsc
+	file,C:\Program Files (x86)\Steam\steamapps\common\Call of Duty Black Ops III\mods\practicetool\scripts\zm\zm_tomb\ending_patch.gsc,1743196227,
+scriptparsetree,scripts/zm/zm_tomb/lightning_parts_patch.gsc
+	file,C:\Program Files (x86)\Steam\steamapps\common\Call of Duty Black Ops III\mods\practicetool\scripts\zm\zm_tomb\lightning_parts_patch.gsc,1743196198,
+scriptparsetree,scripts/zm/zm_tomb/self_med_patch.gsc
+	file,C:\Program Files (x86)\Steam\steamapps\common\Call of Duty Black Ops III\mods\practicetool\scripts\zm\zm_tomb\self_med_patch.gsc,1743196212,
+scriptparsetree,scripts/zm/zm_tomb/zm_tomb_soft_patch.gsc
+	file,C:\Program Files (x86)\Steam\steamapps\common\Call of Duty Black Ops III\mods\practicetool\scripts\zm\zm_tomb\zm_tomb_soft_patch.gsc,1743196179,
+scriptparsetree,scripts/zm/zm_common/pap_patch.gsc
+	file,C:\Program Files (x86)\Steam\steamapps\common\Call of Duty Black Ops III\mods\practicetool\scripts\zm\zm_common\pap_patch.gsc,1743266285,
+scriptparsetree,scripts/zm/zm_common/song_patch.gsc
+	file,C:\Program Files (x86)\Steam\steamapps\common\Call of Duty Black Ops III\mods\practicetool\scripts\zm\zm_common\song_patch.gsc,1743266281,
+scriptparsetree,scripts/zm/zm_common/common_functions.gsc
+	file,C:\Program Files (x86)\Steam\steamapps\common\Call of Duty Black Ops III\mods\practicetool\scripts\zm\zm_common\common_functions.gsc,1743270471,
 rawfile,ui/uieditor/widgets/startmenu/startmenu_options.lua
 rawfile,ui/uieditor/widgets/startmenu/startmenu_custom.lua
 rawfile,ui/uieditor/widgets/startmenu/addallinonecommands.lua
@@ -25,7 +101,7 @@ rawfile,dummy.cfg
 texturecombo,zm_mod
 assetlist,zm_mod
 	file,C:\Program Files (x86)\Steam\steamapps\common\Call of Duty Black Ops III\share\raw\gamedata\playeranim\playeranimtypes.txt,1720471645,
-	file,C:\Program Files (x86)\Steam\steamapps\common\Call of Duty Black Ops III\mods\practicetool\zone_source\zm_mod.zone,1743188175,e6bab981,f151a921,2eb2c515,9a00a18a
+	file,C:\Program Files (x86)\Steam\steamapps\common\Call of Duty Black Ops III\mods\practicetool\zone_source\zm_mod.zone,1743197925,4dbc0cdd,f6326eb2,e0826af4,7eae65fd
 	file,C:\Program Files (x86)\Steam\steamapps\common\Call of Duty Black Ops III\share\zone_source\zm_mod.class,1720471507,
 	file,C:\Program Files (x86)\Steam\steamapps\common\Call of Duty Black Ops III\share\zone_source\mod_default.class,1720471507,
 	file,C:\Program Files (x86)\Steam\steamapps\common\Call of Duty Black Ops III\share\zone_source\default.class,1720471475,
