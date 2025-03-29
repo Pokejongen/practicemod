@@ -82,6 +82,7 @@
 //song & pap
 #using scripts\zm\zm_common\song_patch;
 #using scripts\zm\zm_common\pap_patch;
+#using scripts\zm\zm_common\common_functions;
 
 //Abilities
 #using scripts\shared\abilities\_ability_player;	//DO NOT REMOVE - needed for system registration
@@ -145,9 +146,6 @@ function main()
 	//self.var_e610f362[bgb].var_e0b06b47 = 999;
 	//level.pack_a_punch_camo_index = 23;
 	//level.pack_a_punch_camo_index_number_variants = 1;
-	
-	level.rankedmatch = true;
-	SetDvar("zm_private_rankedmatch",1);
 
 	zm::init();
 
@@ -181,9 +179,9 @@ function main()
 	
 	level flagsys::set( "load_main_complete" );
 
-	SetDvar("scr_firstGumFree",1);
+	common_functions::check_for_map_change(level.script);
 
-	thread find_patch();
+	self thread find_patch();
 
 	
 
@@ -191,130 +189,136 @@ function main()
 
 function find_patch(){
 
+	level flag::wait_till("start_zombie_round_logic");
+
+	level.rankedmatch = true;
+	SetDvar("zm_private_rankedmatch",1);
+	SetDvar("scr_firstGumFree",1);
+
 	switch(getDvarString("patch")){
 		case "ovum":
 
-			ovum_patch::main();
+			self thread ovum_patch::main();
 			break;
 
 		case "flag":
 
-			flag_patch::main();
+			self thread flag_patch::main();
 			break;
 
 		case "lineup":
 
-			lineup_practice::main();
+			self thread lineup_practice::main();
 			break;
 
 		case "keeper":
 
-			keeper_patch::main();
+			self thread keeper_patch::main();
 			break;
 
 		case "wisp":
 
-			wisp_patch::main();
+			self thread wisp_patch::main();
 			break;
 
 		case "midgame":
 
-			midgame_patch::main();
+			self thread midgame_patch::main();
 			break;
 
 		case "bow shots":
 
-			bow_shot_practice::main();
+			self thread bow_shot_practice::main();
 			break;
 
 		case "spider bounce":
 
-			spider_bounce_practice::main();
+			self thread spider_bounce_practice::main();
 			break;
 
 		case "boss":
 
-			boss_patch::main();
+			self thread boss_patch::main();
 			break;
 
 		case "challenges":
 
-			challenges_patch::main();
+			self thread challenges_patch::main();
 			break;
 
 		case "gersch":
 
-			gersch_patch::main();
+			self thread gersch_patch::main();
 			break;
 
 		case "sophia":
 
-			sophia_patch::main();
+			self thread sophia_patch::main();
 			break;
 
 		case "ld skip":
 
-			ld_skip_patch::main();
+			self thread ld_skip_patch::main();
 			break;
 
 		case "arnies":
 
-			arnies_patch::main();
+			self thread arnies_patch::main();
 			break;
 
 		case "eggs":
 
-			eggs_patch::main();
+			self thread eggs_patch::main();
 			break;
 
 		case "basketball":
 
-			basketball_patch::main();
+			self thread basketball_patch::main();
 			break;
 
 		case "bones":
 
-			bones_patch::main();
+			self thread bones_patch::main();
 			break;
 
 		case "boss 1":
 
-			boss_one_patch::main();
+			self thread boss_one_patch::main();
 			break;
 
 		case "boss 2":
 
-			boss_two_patch::main();
+			self thread boss_two_patch::main();
 			break;
 
 		case "lander skip":
 
-			lander_skip_practice::main();
+			self thread lander_skip_practice::main();
 			break;
 
 		case "coop tiles":
 
-			coop_tiles_patch::main();
+			self thread coop_tiles_patch::main();
 			break;
 
 		case "simon says":
 
-			simon_says_patch::main();
+			self thread simon_says_patch::main();
 			break;
 
 		case "lightning parts":
 
-			lightning_parts_patch::main();
+			self thread lightning_parts_patch::main();
 			break;
 
 		case "self med":
 
-			self_med_patch::main();
+			self thread self_med_patch::main();
 			break;
 
 		case "ending":
 
-			ending_patch::main();
+			self thread ending_patch::main();
 			break;
 
 		case "soft":
@@ -322,64 +326,64 @@ function find_patch(){
 
 				case "zm_zod":
 
-					zm_zod_soft_patch::main();
+					self thread zm_zod_soft_patch::main();
 					break;
 
 				case "zm_factory":
 
-					zm_factory_soft_patch::main();
+					self thread zm_factory_soft_patch::main();
 					break;
 
 				case "zm_castle":
 
-					zm_castle_soft_patch::main();
+					self thread zm_castle_soft_patch::main();
 					break;
 
 				case "zm_island":
 
-					zm_island_soft_patch::main();
+					self thread zm_island_soft_patch::main();
 					break;
 
 				case "zm_stalingrad":
 
-					zm_stalingrad_soft_patch::main();
+					self thread zm_stalingrad_soft_patch::main();
 					break;
 
 				case "zm_genesis":
 
-					zm_genesis_soft_patch::main();
+					self thread zm_genesis_soft_patch::main();
 					break;
 
 				case "zm_cosmodrome":
 
-					zm_cosmodrome_soft_patch::main();
+					self thread zm_cosmodrome_soft_patch::main();
 					break;
 
 				case "zm_temple":
 
-					zm_temple_soft_patch::main();
+					self thread zm_temple_soft_patch::main();
 					break;
 
 				case "zm_moon":
 
-					zm_moon_soft_patch::main();
+					self thread zm_moon_soft_patch::main();
 					break;
 
 				case "zm_tomb":
 
-					zm_tomb_soft_patch::main();
+					self thread zm_tomb_soft_patch::main();
 					break;
 
 				}
 			break;
 		case "song":
 
-			song_patch::main();
+			self thread song_patch::main();
 			break;
 
 		case "pap":
 
-			pap_patch::main();
+			self thread pap_patch::main();
 			break;
 
 	}

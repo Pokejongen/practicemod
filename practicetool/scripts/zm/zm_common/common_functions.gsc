@@ -54,6 +54,19 @@ function main(){
 
 }
 
+function check_for_map_change(current_map){
+
+    if(current_map == getDvarString("last_map")){
+
+        return;
+
+    }
+
+    setDvar("last_map", level.script);
+    setDvar("patch", "");
+
+}
+
 function ms_to_str(ms)
 {
     min = 0;

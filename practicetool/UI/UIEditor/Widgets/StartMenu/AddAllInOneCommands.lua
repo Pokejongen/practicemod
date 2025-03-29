@@ -147,6 +147,8 @@ CoD.AddAllInOneCommands = function(controller)
         table.insert(f3_local0, f3_local1("ovum"))
         table.insert(f3_local0, f3_local1("flag"))
         table.insert(f3_local0, f3_local1("soft"))
+        table.insert(f3_local0, f3_local1("song"))
+        table.insert(f3_local0, f3_local1("pap"))
     elseif Engine.GetCurrentMap() == "zm_factory" then   
         table.insert(f3_local0, f3_local1("lineup"))
         table.insert(f3_local0, f3_local1("soft"))

@@ -54,49 +54,49 @@ function main(){
 
         case "zm_zod":
 
-            self.bgb_pack = Array("zm_bgb_perkaholic", "zm_bgb_reign_drops", "zm_bgb_shopping_free", "zm_bgb_anywhere_but_here", "zm_bgb_extra_credit");
-            self.bgb_pack_randomized = Array("zm_bgb_anywhere_but_here", "zm_bgb_extra_credit", "zm_bgb_perkaholic");
-            ArrayInsert(self.bgb_pack_randomized, "zm_bgb_reign_drops", 0);
-            ArrayInsert(self.bgb_pack_randomized, "zm_bgb_shopping_free", 4);
+            level.players[0].bgb_pack = Array("zm_bgb_perkaholic", "zm_bgb_reign_drops", "zm_bgb_shopping_free", "zm_bgb_anywhere_but_here", "zm_bgb_extra_credit");
+            level.players[0].bgb_pack_randomized = Array("zm_bgb_anywhere_but_here", "zm_bgb_extra_credit", "zm_bgb_perkaholic");
+            ArrayInsert(level.players[0].bgb_pack_randomized, "zm_bgb_reign_drops", 0);
+            ArrayInsert(level.players[0].bgb_pack_randomized, "zm_bgb_shopping_free", 4);
             level flag::wait_till("initial_blackscreen_passed");
 	        iprintlnbold("Shadows of Evil " + getDvarString("patch") + " patch is loaded!");
             break;
 
         case "zm_factory":
 
-            self.bgb_pack = Array("zm_bgb_shopping_free", "zm_bgb_reign_drops", "zm_bgb_extra_credit", "zm_bgb_perkaholic", "zm_bgb_anywhere_but_here");
-            self.bgb_pack_ramdomized = Array("zm_bgb_reign_drops", "zm_bgb_extra_credit");
-            ArrayInsert(self.bgb_pack_randomized, "zm_bgb_shopping_free", 0);
+            level.players[0].bgb_pack = Array("zm_bgb_shopping_free", "zm_bgb_reign_drops", "zm_bgb_extra_credit", "zm_bgb_perkaholic", "zm_bgb_anywhere_but_here");
+            level.players[0].bgb_pack_ramdomized = Array("zm_bgb_reign_drops", "zm_bgb_extra_credit");
+            ArrayInsert(level.players[0].bgb_pack_randomized, "zm_bgb_shopping_free", 0);
             level flag::wait_till("initial_blackscreen_passed");
 	        iprintlnbold("The Giant " + getDvarString("patch") + " patch is loaded!");
             break;
 
         case "zm_castle":
 
-            self.bgb_pack = Array("zm_bgb_shopping_free", "zm_bgb_reign_drops", "zm_bgb_extra_credit", "zm_bgb_perkaholic", "zm_bgb_anywhere_but_here");
-            self.bgb_pack_ramdomized = Array("zm_bgb_reign_drops", "zm_bgb_extra_credit", "zm_bgb_perkaholic", "zm_bgb_anywhere_but_here");
-            ArrayInsert(self.bgb_pack_randomized, "zm_bgb_shopping_free", 0);
+            level.players[0].bgb_pack = Array("zm_bgb_shopping_free", "zm_bgb_reign_drops", "zm_bgb_extra_credit", "zm_bgb_perkaholic", "zm_bgb_anywhere_but_here");
+            level.players[0].bgb_pack_ramdomized = Array("zm_bgb_reign_drops", "zm_bgb_extra_credit", "zm_bgb_perkaholic", "zm_bgb_anywhere_but_here");
+            ArrayInsert(level.players[0].bgb_pack_randomized, "zm_bgb_shopping_free", 0);
             level flag::wait_till("initial_blackscreen_passed");
 	        iprintlnbold("Der Eisendrache " + getDvarString("patch") + " patch is loaded!");
             break;
 
         case "zm_island":
 
-            self.bgb_pack = Array("zm_bgb_shopping_free", "zm_bgb_reign_drops", "zm_bgb_extra_credit", "zm_bgb_perkaholic", "zm_bgb_anywhere_but_here");
-            self.bgb_pack_randomized = Array("zm_bgb_shopping_free", "zm_bgb_reign_drops", "zm_bgb_extra_credit");
-            ArrayInsert(self.bgb_pack_randomized, "zm_bgb_anywhere_but_here", 2);
-            ArrayInsert(self.bgb_pack_randomized, "zm_bgb_perkaholic", 4);
+            level.players[0].bgb_pack = Array("zm_bgb_shopping_free", "zm_bgb_reign_drops", "zm_bgb_extra_credit", "zm_bgb_perkaholic", "zm_bgb_anywhere_but_here");
+            level.players[0].bgb_pack_randomized = Array("zm_bgb_shopping_free", "zm_bgb_reign_drops", "zm_bgb_extra_credit");
+            ArrayInsert(level.players[0].bgb_pack_randomized, "zm_bgb_anywhere_but_here", 2);
+            ArrayInsert(level.players[0].bgb_pack_randomized, "zm_bgb_perkaholic", 4);
             level flag::wait_till("initial_blackscreen_passed");
 	        iprintlnbold("Zetsubou no Shima " + getDvarString("patch") + " patch is loaded!");
             break;
 
         case "zm_stalingrad":
 
-            self.bgb_pack = Array("zm_bgb_shopping_free", "zm_bgb_reign_drops", "zm_bgb_extra_credit", "zm_bgb_perkaholic", "zm_bgb_anywhere_but_here");
-            self.bgb_pack_randomized = Array("zm_bgb_shopping_free", "zm_bgb_reign_drops", "zm_bgb_extra_credit", "zm_bgb_perkaholic", "zm_bgb_anywhere_but_here");
-            while(self.bgb_pack_randomized[0] != "zm_bgb_shopping_free" || self.bgb_pack_randomized[0] != "zm_bgb_reign_drops" || self.bgb_pack_randomized[0] != "zm_bgb_extra_credit"){
+            level.players[0].bgb_pack = Array("zm_bgb_shopping_free", "zm_bgb_reign_drops", "zm_bgb_extra_credit", "zm_bgb_perkaholic", "zm_bgb_anywhere_but_here");
+            level.players[0].bgb_pack_randomized = Array("zm_bgb_shopping_free", "zm_bgb_reign_drops", "zm_bgb_extra_credit", "zm_bgb_perkaholic", "zm_bgb_anywhere_but_here");
+            while(level.players[0].bgb_pack_randomized[0] != "zm_bgb_shopping_free" || level.players[0].bgb_pack_randomized[0] != "zm_bgb_reign_drops" || level.players[0].bgb_pack_randomized[0] != "zm_bgb_extra_credit"){
 
-                self.bgb_pack_randomized = Array("zm_bgb_shopping_free", "zm_bgb_reign_drops", "zm_bgb_extra_credit", "zm_bgb_perkaholic", "zm_bgb_anywhere_but_here");
+                level.players[0].bgb_pack_randomized = Array("zm_bgb_shopping_free", "zm_bgb_reign_drops", "zm_bgb_extra_credit", "zm_bgb_perkaholic", "zm_bgb_anywhere_but_here");
                 wait 0.05;
 
             }
@@ -106,56 +106,57 @@ function main(){
 
         case "zm_genesis":
 
-            self.bgb_pack = Array("zm_bgb_shopping_free", "zm_bgb_reign_drops", "zm_bgb_extra_credit", "zm_bgb_perkaholic", "zm_bgb_anywhere_but_here");
-            self.bgb_pack_ramdomized = Array("zm_bgb_shopping_free", "zm_bgb_extra_credit", "zm_bgb_perkaholic", "zm_bgb_anywhere_but_here");
-            ArrayInsert(self.bgb_pack_randomized, "zm_bgb_reign_drops", 0);
+            level.players[0].bgb_pack = Array("zm_bgb_shopping_free", "zm_bgb_reign_drops", "zm_bgb_extra_credit", "zm_bgb_perkaholic", "zm_bgb_anywhere_but_here");
+            level.players[0].bgb_pack_ramdomized = Array("zm_bgb_shopping_free", "zm_bgb_extra_credit", "zm_bgb_perkaholic", "zm_bgb_anywhere_but_here");
+            ArrayInsert(level.players[0].bgb_pack_randomized, "zm_bgb_reign_drops", 0);
             level flag::wait_till("initial_blackscreen_passed");
 	        iprintlnbold("Revelations " + getDvarString("patch") + " patch is loaded!");
             break;
 
         case "zm_theater":
 
-            self.bgb_pack = Array("zm_bgb_shopping_free", "zm_bgb_reign_drops", "zm_bgb_extra_credit", "zm_bgb_perkaholic", "zm_bgb_anywhere_but_here");
-            self.bgb_pack_ramdomized = Array("zm_bgb_reign_drops", "zm_bgb_extra_credit", "zm_bgb_perkaholic", "zm_bgb_anywhere_but_here");
-            ArrayInsert(self.bgb_pack_randomized, "zm_bgb_shopping_free", 0);
+            level.players[0].bgb_pack = Array("zm_bgb_shopping_free", "zm_bgb_reign_drops", "zm_bgb_extra_credit", "zm_bgb_perkaholic", "zm_bgb_anywhere_but_here");
+            level.players[0].bgb_pack_ramdomized = Array("zm_bgb_reign_drops", "zm_bgb_extra_credit", "zm_bgb_perkaholic", "zm_bgb_anywhere_but_here");
+            ArrayInsert(level.players[0].bgb_pack_randomized, "zm_bgb_shopping_free", 0);
             level flag::wait_till("initial_blackscreen_passed");
 	        iprintlnbold("Kino der Toten " + getDvarString("patch") + " patch is loaded!");
             break;
 
         case "zm_cosmodrome":
 
-            self.bgb_pack = Array("zm_bgb_shopping_free", "zm_bgb_reign_drops", "zm_bgb_extra_credit", "zm_bgb_perkaholic", "zm_bgb_anywhere_but_here");
-            self.bgb_pack_ramdomized = Array("zm_bgb_reign_drops", "zm_bgb_extra_credit", "zm_bgb_perkaholic", "zm_bgb_anywhere_but_here");
-            ArrayInsert(self.bgb_pack_randomized, "zm_bgb_shopping_free", 0);
+            level.players[0].bgb_pack = Array("zm_bgb_shopping_free", "zm_bgb_reign_drops", "zm_bgb_extra_credit", "zm_bgb_perkaholic", "zm_bgb_anywhere_but_here");
+            level.players[0].bgb_pack = Array("zm_bgb_shopping_free", "zm_bgb_reign_drops", "zm_bgb_extra_credit", "zm_bgb_perkaholic", "zm_bgb_anywhere_but_here");
+            level.players[0].bgb_pack_ramdomized = Array("zm_bgb_reign_drops", "zm_bgb_extra_credit", "zm_bgb_perkaholic", "zm_bgb_anywhere_but_here");
+            ArrayInsert(level.players[0].bgb_pack_randomized, "zm_bgb_shopping_free", 0);
             level flag::wait_till("initial_blackscreen_passed");
 	        iprintlnbold("Ascension " + getDvarString("patch") + " patch is loaded!");
             break;
 
         case "zm_temple":
 
-            self.bgb_pack = Array("zm_bgb_shopping_free", "zm_bgb_reign_drops", "zm_bgb_extra_credit", "zm_bgb_perkaholic", "zm_bgb_anywhere_but_here");
-            self.bgb_pack_ramdomized = Array("zm_bgb_reign_drops", "zm_bgb_extra_credit", "zm_bgb_perkaholic", "zm_bgb_anywhere_but_here");
-            ArrayInsert(self.bgb_pack_randomized, "zm_bgb_shopping_free", 0);
+            level.players[0].bgb_pack = Array("zm_bgb_shopping_free", "zm_bgb_reign_drops", "zm_bgb_extra_credit", "zm_bgb_perkaholic", "zm_bgb_anywhere_but_here");
+            level.players[0].bgb_pack_ramdomized = Array("zm_bgb_reign_drops", "zm_bgb_extra_credit", "zm_bgb_perkaholic", "zm_bgb_anywhere_but_here");
+            ArrayInsert(level.players[0].bgb_pack_randomized, "zm_bgb_shopping_free", 0);
             level flag::wait_till("initial_blackscreen_passed");
 	        iprintlnbold("Shangri La " + getDvarString("patch") + " patch is loaded!");
             break;
 
         case "zm_moon":
 
-            self.bgb_pack = Array("zm_bgb_shopping_free", "zm_bgb_reign_drops", "zm_bgb_extra_credit", "zm_bgb_perkaholic", "zm_bgb_anywhere_but_here");
-            self.bgb_pack_ramdomized = Array("zm_bgb_reign_drops", "zm_bgb_extra_credit", "zm_bgb_perkaholic", "zm_bgb_anywhere_but_here");
-            ArrayInsert(self.bgb_pack_randomized, "zm_bgb_shopping_free", 0);
+            level.players[0].bgb_pack = Array("zm_bgb_shopping_free", "zm_bgb_reign_drops", "zm_bgb_extra_credit", "zm_bgb_perkaholic", "zm_bgb_anywhere_but_here");
+            level.players[0].bgb_pack_ramdomized = Array("zm_bgb_reign_drops", "zm_bgb_extra_credit", "zm_bgb_perkaholic", "zm_bgb_anywhere_but_here");
+            ArrayInsert(level.players[0].bgb_pack_randomized, "zm_bgb_shopping_free", 0);
             level flag::wait_till("initial_blackscreen_passed");
 	        iprintlnbold("Moon " + getDvarString("patch") + " patch is loaded!");
             break;
 
         case "zm_tomb":
 
-            self.bgb_pack = Array("zm_bgb_shopping_free", "zm_bgb_reign_drops", "zm_bgb_extra_credit", "zm_bgb_perkaholic", "zm_bgb_anywhere_but_here");
-            self.bgb_pack_randomized = Array("zm_bgb_shopping_free", "zm_bgb_reign_drops", "zm_bgb_extra_credit", "zm_bgb_perkaholic", "zm_bgb_anywhere_but_here");
-            while(self.bgb_pack_randomized[0] != "zm_bgb_shopping_free" || self.bgb_pack_randomized[0] != "zm_bgb_reign_drops" || self.bgb_pack_randomized[0] != "zm_bgb_extra_credit"){
+            level.players[0].bgb_pack = Array("zm_bgb_shopping_free", "zm_bgb_reign_drops", "zm_bgb_extra_credit", "zm_bgb_perkaholic", "zm_bgb_anywhere_but_here");
+            level.players[0].bgb_pack_randomized = Array("zm_bgb_shopping_free", "zm_bgb_reign_drops", "zm_bgb_extra_credit", "zm_bgb_perkaholic", "zm_bgb_anywhere_but_here");
+            while(level.players[0].bgb_pack_randomized[0] != "zm_bgb_shopping_free" || level.players[0].bgb_pack_randomized[0] != "zm_bgb_reign_drops" || level.players[0].bgb_pack_randomized[0] != "zm_bgb_extra_credit"){
 
-                self.bgb_pack_randomized = Array("zm_bgb_shopping_free", "zm_bgb_reign_drops", "zm_bgb_extra_credit", "zm_bgb_perkaholic", "zm_bgb_anywhere_but_here");
+                level.players[0].bgb_pack_randomized = Array("zm_bgb_shopping_free", "zm_bgb_reign_drops", "zm_bgb_extra_credit", "zm_bgb_perkaholic", "zm_bgb_anywhere_but_here");
                 wait 0.05;
 
             }
