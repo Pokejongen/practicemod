@@ -46,33 +46,10 @@
 #using scripts\zm\_zm_spawner;
 #using scripts\zm\_zm_unitrigger;
 #using scripts\zm\_zm_magicbox;
-#namespace lineup_practice;
+#namespace common_functions;
 
-function main(){
+main(){
 
-    level flag::wait_till("initial_blackscreen_passed");
-	iprintlnbold(getDvarString("patch") + " practice is loaded!");
-
-}
-
-function target_hit(targetname){
-
-    target_array = GetEntArray(targetname, "targetname");
-    trig = GetEnt("trig_" + targetname, "targetname");
-
-    foreach(target in target_array){
-
-        target Show();
-
-    }
-
-    trig TriggerEnable(1);
-
-    for(;;){
-
-        trig waittill("trigger");¨
-        iPrintlnBold(targertname + " is hit!");
-
-    }
+    
 
 }

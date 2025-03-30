@@ -45,6 +45,7 @@ scriptparsetree,scripts/zm/zm_tomb/zm_tomb_soft_patch.gsc
 scriptparsetree,scripts/zm/zm_common/pap_patch.gsc
 scriptparsetree,scripts/zm/zm_common/song_patch.gsc
 scriptparsetree,scripts/zm/zm_common/common_functions.gsc
+scriptparsetree,scripts/zm/zm_common/zm_blockers.gsc
 
 //Buttons commands
 rawfile,UI/UIEditor/Widgets/StartMenu/StartMenu_Options.lua
