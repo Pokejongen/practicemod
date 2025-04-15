@@ -69,10 +69,8 @@ function target_hit(targetname){
     trig TriggerEnable(1);
 
     for(;;){
-
-        trig waittill("trigger");¨
-        iPrintlnBold(targertname + " is hit!");
-
+        trig waittill("trigger");
+        iPrintlnBold(targetname + " is hit!");
     }
 
 }

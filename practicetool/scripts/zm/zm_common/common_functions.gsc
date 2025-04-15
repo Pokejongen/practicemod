@@ -46,6 +46,7 @@
 #using scripts\zm\_zm_spawner;
 #using scripts\zm\_zm_unitrigger;
 #using scripts\zm\_zm_magicbox;
+#using scripts\zm\zm_common\zm_blockers;
 #namespace common_functions;
 
 function main(){
@@ -138,6 +139,12 @@ function WriteToScreen(text)
     }
 }
 
+function WaitFadeIn()
+{
+    while(!IsDefined(level.n_gameplay_start_time)) wait 0.05;
+}
+
+
 // ROUNDS
 
 function EndRound(text = 1)
@@ -166,9 +173,22 @@ function EndRound(text = 1)
     }
 }
 
-
-function SkipToRound(round = 0, zombies_left = -1, delay = 0)
+function WaitRound()
 {
+    level waittill("end_of_round");
+    level flag::clear("round_skip_request");
+}
+
+
+function SkipToRound(round, zombies_left, delay)
+{
+    if (isDefined(round) == false)
+        round = 0;
+    if (isDefined(zombies_left) == false)
+        zombies_left = -1;
+    if (isDefined(delay) == false)
+        delay = 0;
+
     if(level flag::get("round_skip_request"))
     {
         thread WriteToScreen("Round Request Already Queued");
@@ -187,6 +207,35 @@ function SkipToRound(round = 0, zombies_left = -1, delay = 0)
     }
 }
 
+function SetZombieCount(zombies_left)
+{
+    while(!level.zombie_total && !zombie_utility::get_round_enemy_Array().size) wait 0.05;
+    thread WriteToScreen("Setting Zombie Count to: " + zombies_left);
+    level.zombie_total = zombies_left;
+}
+
+/* Original SkipToRound Function
+function SkipToRound(round = 0, zombies_left = -1, delay = 0)
+{
+
+    if(level flag::get("round_skip_request"))
+    {
+        thread WriteToScreen("Round Request Already Queued");
+        return;
+    }
+    if(!round) round = level.round_number;
+    if(delay) wait delay;
+    thread WriteToScreen("Changing To Round " + round);
+	zm::set_round_number(round - 1);
+    EndRound(0);
+    level.zombie_move_speed = round * level.zombie_vars["zombie_move_speed_multiplier"];
+    if(zombies_left >= 0)
+    {
+        level waittill("zombie_total_set");
+        level.zombie_total = zombies_left;
+    }
+}
+*/
 // STORM QUEST - DER EISENDRACHE
 
 function DoStormStep(num)
@@ -387,6 +436,80 @@ function CheckQuestProgress(quest)
 }
 
 // TIME TRAVEL - DER EISENDRACHE
+
+function TimeTravel(num)
+{
+    upgrades = Array("demon_gate_upgraded", "elemental_storm_upgraded", "rune_prison_upgraded", "wolf_howl_upgraded");
+	level flag::wait_till_any(upgrades);
+    level flag::set("ee_start_done");
+    if(num >= 0 && !level flag::get("mpd_canister_replacement"))
+    {
+        level flag::set("time_travel_teleporter_ready");
+        wait 0.25;
+        fuse = struct::get("ee_lab_fuse");
+        canister = struct::get("mpd_canister");
+        fuse_found = 0;
+        canister_found = 0;
+        for(;;)
+        {
+            foreach(stub in level._unitriggers.trigger_stubs)
+            {
+                if(!fuse_found && fuse.origin == stub.origin)
+                {
+                    self BuildAndActivateTrigger(stub);
+                    fuse_found = 1;
+                }
+                if(!canister_found && canister.origin == stub.origin)
+                {
+                    self BuildAndActivateTrigger(stub);
+                    canister_found = 1;
+                }
+            }
+            if(fuse_found && canister_found) break;
+            wait 0.05;
+        }
+        wait 0.5;
+        level flag::clear("time_travel_teleporter_ready");
+    }
+    if(num >= 1 && !level flag::get("ee_safe_open"))
+    {
+        level flag::set("death_ray_trap_used");
+        fuse_box = GetEnt("fuse_box", "targetname");
+        fuse_box notify("trigger_activated");
+        wait 0.5;
+        deathray = GetEnt("ee_death_ray_switch", "targetname");
+        deathray notify("trigger_activated");
+        wait 0.5;
+        level.var_ab58bca7 = [];
+        level.var_ab58bca7[0] = 0;
+        level.var_ab58bca7[1] = 0;
+        level.var_ab58bca7[2] = 0;
+        monitor = struct::get("monitor_launch_platform_1");
+        monitor.var_d82c7c68 = 1;
+        for(i = 0; i < 3; i++)
+        {
+            monitor notify("trigger_activated");
+            wait 1.5;
+        }
+        key = GetEnt("golden_key", "targetname");
+        key notify("trigger_activated");
+        wait 0.5;
+    }
+    if(num >= 1 && !level flag::get("channeling_stone_replacement"))
+    {
+        level flag::set("time_travel_teleporter_ready");
+        wait 0.25;
+        key_slot = struct::get("golden_key_slot_past");
+        self BuildAndActivateTrigger(key_slot.s_unitrigger);
+        wait 0.5;
+        tablet = GetEnt("stone_past", "targetname");
+        self BuildAndActivateTrigger(tablet.s_unitrigger);
+        wait 0.5;
+        level flag::clear("time_travel_teleporter_ready");
+    }
+}
+
+/* ORIGINAL FUNCTION
 function TimeTravel(num)
 {
     upgrades = Array("demon_gate_upgraded", "elemental_storm_upgraded", "rune_prison_upgraded", "wolf_howl_upgraded");
@@ -455,6 +578,7 @@ function TimeTravel(num)
         level flag::clear("time_travel_teleporter_ready");
     }
 }
+*/
 
 // SIMON SAYS
 function DoSimonStep(num)
@@ -734,4 +858,10 @@ function InfiniteAmmo(value)
     if(value) text = "Infinite Ammo Enabled";
     thread WriteToScreen(text);
     SetDvar("player_sustainAmmo", value);
+}
+
+function IsTrue(bool)
+{
+	if(IsDefined(bool) && bool) return true;
+	else return false;
 }

@@ -46,6 +46,7 @@
 #using scripts\zm\_zm_spawner;
 #using scripts\zm\_zm_unitrigger;
 #using scripts\zm\_zm_magicbox;
+#using scripts\zm\zm_common\zm_blockers;
 #using scripts\zm\zm_common\common_functions;
 #namespace keeper_patch;
 
@@ -62,16 +63,16 @@ function KeeperPractice()
     if(level.script != "zm_castle")
     {
         level flag::wait_till("initial_blackscreen_passed");
-        thread WriteToScreen("Wrong Map For Loaded Patch - Correct Map: DE");
+        thread common_functions::WriteToScreen("Wrong Map For Loaded Patch - Correct Map: DE");
         return;
     }
     self.bgb_pack = Array("zm_bgb_perkaholic", "zm_bgb_reign_drops", "zm_bgb_dead_of_nuclear_winter", "zm_bgb_anywhere_but_here", "zm_bgb_extra_credit");
  	level.players[0].bgb_pack = Array("zm_bgb_perkaholic", "zm_bgb_reign_drops", "zm_bgb_dead_of_nuclear_winter", "zm_bgb_anywhere_but_here", "zm_bgb_extra_credit");
     level flag::wait_till("initial_blackscreen_passed");
-    thread WriteToScreen("Keeper Practice Starting");
+    thread common_functions::WriteToScreen("Keeper Practice Starting");
     level flag::clear("spawn_zombies");
     level flag::set("story_playing");
-    Timescale(10);
+    common_functions::Timescale(10);
     self.score = 10000;
     self thread OpenAllDoors();
     self thread ActivateAllPower();
@@ -81,14 +82,14 @@ function KeeperPractice()
         wait 0.1;
     }
     self thread GiveAllPerks();
-    FinishStorm();
+    common_functions::FinishStorm();
     while(!self HasWeapon(GetWeapon("elemental_bow_storm"))) wait 0.05;
     self zm_weapons::weapon_give(GetWeapon("ar_cqb"));
     self zm_weapons::weapon_give(GetWeapon("pistol_standard"));
-    self TimeTravel(2);
-    self SimonSays();
-    self ActivateDempsey();
-    thread SkipToRound(9);
+    self common_functions::TimeTravel(2);
+    self common_functions::SimonSays();
+    self common_functions::ActivateDempsey();
+    thread common_functions::SkipToRound(9);
     level flag::set("time_travel_teleporter_ready");
     tele = GetEntArray("trigger_teleport_pad", "targetname")[1];
     self SetOrigin(tele.origin);
@@ -101,8 +102,8 @@ function KeeperPractice()
     tablet notify("trigger_activated");
     level flag::wait_till("channeling_stone_replacement");
     level flag::wait_till("spawn_zombies");
-    Timescale(1);
-    level notify("hash_b5927dd");
+    common_functions::Timescale(1);
+    level notify(#"hash_b5927dd");
     thread KeeperProgress();
     level flag::clear("story_playing");
     level.var_1f18338d = "storm";
